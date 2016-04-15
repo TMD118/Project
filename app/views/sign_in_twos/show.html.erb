@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sign_in_two.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @sign_in_two.password %>
+</p>
+
+<p>
+  <strong>Doctorid:</strong>
+  <%= @sign_in_two.doctorID %>
+</p>
+
+<%= link_to 'Edit', edit_sign_in_two_path(@sign_in_two) %> |
+<%= link_to 'Back', sign_in_twos_path %>

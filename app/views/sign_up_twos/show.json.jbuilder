@@ -1,0 +1,1 @@
+json.extract! @sign_up_two, :id, :firstname, :middlename, :lastname, :username, :PMDCno, :email, :phoneno, :cellno, :dateofbirth, :password, :confirmpassword, :speciality, :city, :institution, :officehourstart, :officehourend, :created_at, :updated_at

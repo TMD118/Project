@@ -1,0 +1,55 @@
+<body style="background-color:lightgrey;">
+
+<div id="content">
+  <img src="/appointment.jpg" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+</div>
+
+<h1 style="color:blue;">Make an appointment</h1>
+  
+<div style="background-color:black; color:white; padding:10px; font-weight:bold;" background="appointment.jpg">
+
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prefferedInstitution %><br>
+    <%= f.text_field :prefferedInstitution %>
+  </div>
+  <div class="field">
+    <%= f.label :prefferedDoctor %><br>
+    <%= f.text_field :prefferedDoctor %>
+  </div>
+  <div class="field">
+    <%= f.label :fromDate %><br>
+    <%= f.datetime_select :fromDate %>
+  </div>
+  <div class="field">
+    <%= f.label :toDate %><br>
+    <%= f.datetime_select :toDate %>
+  </div>
+  <div class="field">
+    <%= f.label :prefferedTime %><br>
+    <%= f.time_select :prefferedTime %>
+  </div>
+  <div class="field">
+    <%= f.label :detailsOfAilment %><br>
+    <%= f.text_area :detailsOfAilment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>
+
+</body>

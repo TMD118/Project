@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sign_in_one.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @sign_in_one.password %>
+</p>
+
+<%= link_to 'Edit', edit_sign_in_one_path(@sign_in_one) %> |
+<%= link_to 'Back', sign_in_ones_path %>

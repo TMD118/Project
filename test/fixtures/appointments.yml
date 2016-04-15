@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prefferedInstitution: MyString
+  prefferedDoctor: MyString
+  fromDate: 2016-03-21 20:32:58
+  toDate: 2016-03-21 20:32:58
+  prefferedTime: 2016-03-21 20:32:58
+  detailsOfAilment: MyText
+
+two:
+  prefferedInstitution: MyString
+  prefferedDoctor: MyString
+  fromDate: 2016-03-21 20:32:58
+  toDate: 2016-03-21 20:32:58
+  prefferedTime: 2016-03-21 20:32:58
+  detailsOfAilment: MyText

@@ -1,0 +1,94 @@
+<body style="background-color:grey;">
+
+<div id="content">
+  <img src="/SIGNUP.png" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+  <img src="/doctor.jpg" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+</div>
+
+<h1>SignUp for doctors</h1>
+
+<div style="background-color:black; color:white; padding:10px; font-weight:bold;" background="bgimage.jpg">
+  
+<%= form_for(@sign_up_two) do |f| %>
+  <% if @sign_up_two.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sign_up_two.errors.count, "error") %> prohibited this sign_up_two from being saved:</h2>
+
+      <ul>
+      <% @sign_up_two.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :middlename %><br>
+    <%= f.text_field :middlename %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :PMDCno %><br>
+    <%= f.number_field :PMDCno %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phoneno %><br>
+    <%= f.text_field :phoneno %>
+  </div>
+  <div class="field">
+    <%= f.label :cellno %><br>
+    <%= f.text_field :cellno %>
+  </div>
+  <div class="field">
+    <%= f.label :dateofbirth %><br>
+    <%= f.datetime_select :dateofbirth %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :confirmpassword %><br>
+    <%= f.text_field :confirmpassword %>
+  </div>
+  <div class="field">
+    <%= f.label :speciality %><br>
+    <%= f.text_field :speciality %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :institution %><br>
+    <%= f.text_field :institution %>
+  </div>
+  <div class="field">
+    <%= f.label :officehourstart %><br>
+    <%= f.time_select :officehourstart %>
+  </div>
+  <div class="field">
+    <%= f.label :officehourend %><br>
+    <%= f.time_select :officehourend %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>

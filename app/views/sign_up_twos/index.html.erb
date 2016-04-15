@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sign Up Twos</h1>
+
+<table border="5">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Middlename</th>
+      <th>Lastname</th>
+      <th>Username</th>
+      <th>Pmdcno</th>
+      <th>Email</th>
+      <th>Phoneno</th>
+      <th>Cellno</th>
+      <th>Dateofbirth</th>
+      <th>Password</th>
+      <th>Confirmpassword</th>
+      <th>Speciality</th>
+      <th>City</th>
+      <th>Institution</th>
+      <th>Officehourstart</th>
+      <th>Officehourend</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sign_up_twos.each do |sign_up_two| %>
+      <tr>
+        <td><%= sign_up_two.firstname %></td>
+        <td><%= sign_up_two.middlename %></td>
+        <td><%= sign_up_two.lastname %></td>
+        <td><%= sign_up_two.username %></td>
+        <td><%= sign_up_two.PMDCno %></td>
+        <td><%= sign_up_two.email %></td>
+        <td><%= sign_up_two.phoneno %></td>
+        <td><%= sign_up_two.cellno %></td>
+        <td><%= sign_up_two.dateofbirth %></td>
+        <td><%= sign_up_two.password %></td>
+        <td><%= sign_up_two.confirmpassword %></td>
+        <td><%= sign_up_two.speciality %></td>
+        <td><%= sign_up_two.city %></td>
+        <td><%= sign_up_two.institution %></td>
+        <td><%= sign_up_two.officehourstart %></td>
+        <td><%= sign_up_two.officehourend %></td>
+        <td><%= link_to 'Show', sign_up_two %></td>
+        <td><%= link_to 'Edit', edit_sign_up_two_path(sign_up_two) %></td>
+        <td><%= link_to 'Destroy', sign_up_two, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sign up two', new_sign_up_two_path %>

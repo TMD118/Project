@@ -1,0 +1,38 @@
+<body style="background-color:lightgreen;">
+<div id="content">
+  <img src="/LOGIN.png" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+  <img src="/doctor.jpg" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+</div>
+<h1>SignIn for doctors</h1>
+
+<div style="background-color:black; color:white; padding:10px; font-weight:bold;" background="bgimage.jpg">
+<%= form_for(@sign_in_two) do |f| %>
+  <% if @sign_in_two.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sign_in_two.errors.count, "error") %> prohibited this sign_in_two from being saved:</h2>
+
+      <ul>
+      <% @sign_in_two.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :doctorID %><br>
+    <%= f.number_field :doctorID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

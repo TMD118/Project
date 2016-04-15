@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Appointments</h1>
+
+<table  border="4">
+  <thead>
+    <tr>
+      <th>Prefferedinstitution</th>
+      <th>Preffereddoctor</th>
+      <th>Fromdate</th>
+      <th>Todate</th>
+      <th>Prefferedtime</th>
+      <th>Detailsofailment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.prefferedInstitution %></td>
+        <td><%= appointment.prefferedDoctor %></td>
+        <td><%= appointment.fromDate %></td>
+        <td><%= appointment.toDate %></td>
+        <td><%= appointment.prefferedTime %></td>
+        <td><%= appointment.detailsOfAilment %></td>
+        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appointment', new_appointment_path %>

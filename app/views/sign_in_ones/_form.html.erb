@@ -1,0 +1,43 @@
+<body style="background-color:lightblue;">
+
+<div id="content">
+  <img src="/LOGIN.png" alt="appointment" height="200" width="200" align="right" align="top" border="10" style="text-align:right; vertical-align:top; border-color:#ff0000 #0000ff;";>
+</div>
+
+<h1>SignIn for patients</h1>
+
+<div style="background-color:black; color:white; padding:10px; font-weight:bold;" background="bgimage.jpg">
+
+<%= form_for(@sign_in_one) do |f| %>
+  <% if @sign_in_one.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sign_in_one.errors.count, "error") %> prohibited this sign_in_one from being saved:</h2>
+
+      <ul>
+      <% @sign_in_one.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+  <%= submit_tag "Search" %>
+  
+ 
+  
+<% end %>
+
+</div>

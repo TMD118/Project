@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sign In Ones</h1>
+
+<table  border="5">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sign_in_ones.each do |sign_in_one| %>
+      <tr>
+        <td><%= sign_in_one.name %></td>
+        <td><%= sign_in_one.password %></td>
+        <td><%= link_to 'Show', sign_in_one %></td>
+        <td><%= link_to 'Edit', edit_sign_in_one_path(sign_in_one) %></td>
+        <td><%= link_to 'Destroy', sign_in_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sign in one', new_sign_in_one_path %>
